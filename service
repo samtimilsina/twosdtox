@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Our Services | 2SD Toxicology Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #042C53;
+    --navy-mid: #0C447C;
+    --blue: #185FA5;
+    --blue-light: #378ADD;
+    --sky: #85B7EB;
+    --sky-pale: #E6F1FB;
+    --teal: #1D9E75;
+    --teal-dark: #0F6E56;
+    --teal-pale: #E1F5EE;
+    --teal-mid: #9FE1CB;
+    --offwhite: #F7F6F2;
+    --text: #1A1A18;
+    --text-muted: #5F5E5A;
+    --gradient-teal: linear-gradient(135deg, #1D9E75, #0F6E56);
+    --gradient-blue: linear-gradient(135deg, #185FA5, #042C53);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(29,158,117,0.2);
+    --border-glow: 0 0 8px rgba(29,158,117,0.3);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #0a0f1a;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #1a1a2e; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, var(--teal), var(--blue)); border-radius: 10px; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .btn-primary {
+    background: var(--gradient-teal);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(29,158,117,0.3);
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  .btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(29,158,117,0.5);
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(4, 44, 83, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 0 32px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    background: var(--gradient-teal);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  .logo span {
+    background: linear-gradient(135deg, var(--teal-mid), white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-teal);
+    transition: width 0.3s;
+    border-radius: 2px;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  .nav-links a:hover { color: white; }
+  .nav-cta {
+    background: var(--gradient-teal);
+    padding: 8px 22px;
+    border-radius: 50px;
+    color: white !important;
+  }
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(29,158,117,0.3);
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .hamburger span {
+    width: 26px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 75px);
+    background: rgba(4, 44, 83, 0.98);
+    backdrop-filter: blur(20px);
+    transition: left 0.3s ease;
+    z-index: 99;
+    padding: 40px 32px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .mobile-menu.active { left: 0; }
+  .mobile-menu a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .mobile-menu .mobile-cta {
+    background: var(--gradient-teal);
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(145deg, #042C53 0%, #021c33 100%);
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  #particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(29,158,117,0.15);
+    border: 1px solid rgba(29,158,117,0.4);
+    border-radius: 50px;
+    padding: 6px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--teal-mid);
+    margin-bottom: 28px;
+    backdrop-filter: blur(8px);
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 64px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #ffffff, var(--sky), var(--teal-mid));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-tagline {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Who We Serve Bar - Static Label + Scrolling Items */
+  .serve-wrapper {
+    background: rgba(15, 110, 86, 0.95);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 75px;
+    z-index: 50;
+    width: 100%;
+    border-bottom: 2px solid var(--teal);
+    box-shadow: var(--border-glow);
+    overflow: hidden;
+  }
+  .serve-container {
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .serve-label-static {
+    background: rgba(0,0,0,0.4);
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+    margin-left: 20px;
+    margin-right: 10px;
+    z-index: 10;
+    flex-shrink: 0;
+  }
+  .serve-scroll {
+    flex: 1;
+    overflow: hidden;
+    padding: 12px 0;
+  }
+  .serve-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollRightToLeft 25s linear infinite;
+  }
+  .serve-wrapper:hover .serve-track {
+    animation-play-state: paused;
+  }
+  .serve-item {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.3px;
+    margin: 0 25px;
+  }
+  .serve-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--teal-mid);
+    border-radius: 50%;
+    margin: 0 8px;
+    vertical-align: middle;
+  }
+  @keyframes scrollRightToLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Service List Section - Quick Overview (All 4 cards with icons) */
+  .service-list-section {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--border-light);
+  }
+  .service-list-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 15px;
+  }
+  .service-list-section .section-sub {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+  .quick-service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  .quick-service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+  }
+  .quick-service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--teal);
+    box-shadow: var(--border-glow);
+  }
+  .quick-service-card i {
+    font-size: 42px;
+    margin-bottom: 18px;
+  }
+  /* Icon colors for each card */
+  .quick-service-card:nth-child(1) i { color: var(--teal); }
+  .quick-service-card:nth-child(2) i { color: var(--blue); }
+  .quick-service-card:nth-child(3) i { color: var(--teal-dark); }
+  .quick-service-card:nth-child(4) i { color: var(--navy-mid); }
+  .quick-service-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .quick-service-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Service Details Sections */
+  .service-section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .service-section:last-child {
+    border-bottom: none;
+  }
+  .service-section:nth-child(odd) {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  }
+  .service-section:nth-child(even) {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .service-left {
+    background: rgba(255,255,255,0.5);
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(29,158,117,0.2);
+    transition: all 0.3s ease;
+  }
+  .service-left:hover {
+    border-color: var(--teal);
+    box-shadow: var(--border-glow);
+  }
+  .service-icon-large {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-teal);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(29,158,117,0.3);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+  .service-icon-large svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+  }
+  .service-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .service-intro {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+  }
+  .service-list {
+    list-style: none;
+    margin: 20px 0;
+  }
+  .service-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+  .service-list li i {
+    color: var(--teal);
+    font-size: 13px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .service-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 25px 0 20px;
+  }
+  .service-tag {
+    background: rgba(29,158,117,0.1);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal);
+    border: 1px solid rgba(29,158,117,0.2);
+  }
+  .consult-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1.5px solid var(--teal);
+    color: var(--teal);
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-top: 10px;
+  }
+  .consult-btn:hover {
+    background: var(--teal);
+    color: white;
+    transform: translateY(-2px);
+  }
+  .service-right {
+    background: rgba(29,158,117,0.03);
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(29,158,117,0.15);
+    transition: all 0.3s ease;
+  }
+  .service-right:hover {
+    border-color: var(--teal);
+    box-shadow: var(--border-glow);
+  }
+  .service-right h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .service-right h3 i {
+    color: var(--teal);
+  }
+  .feature-highlight {
+    background: rgba(29,158,117,0.06);
+    padding: 18px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: 1px solid rgba(29,158,117,0.1);
+  }
+  .feature-highlight p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--gray-700);
+  }
+  .feature-highlight strong {
+    color: var(--navy);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #042C53 0%, #021c33 100%);
+    padding: 70px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border-light);
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: radial-gradient(circle, rgba(29,158,117,0.08) 0%, transparent 70%);
+    animation: rotateSlow 25s linear infinite;
+  }
+  @keyframes rotateSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .cta-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: white;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-section p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #021c33 0%, #01101f 100%);
+    padding: 60px 0 30px;
+    border-top: 1px solid var(--border-light);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 45px;
+    margin-bottom: 40px;
+  }
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: white;
+    display: block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    background: var(--gradient-teal);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .footer-address {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .footer-phone {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .footer-phone:hover { color: var(--teal-mid); }
+  .footer-col h4 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 22px;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col ul li {
+    margin-bottom: 12px;
+  }
+  .footer-col ul a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .footer-col ul a:hover {
+    color: var(--teal-mid);
+    transform: translateX(6px);
+    display: inline-block;
+  }
+  .social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+  }
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .social-icon:hover {
+    transform: translateY(-5px);
+    border-color: transparent;
+  }
+  .social-icon.fa-facebook-f:hover { background: #1877F2; box-shadow: 0 5px 20px rgba(24,119,242,0.4); }
+  .social-icon.fa-twitter:hover { background: #1DA1F2; box-shadow: 0 5px 20px rgba(29,161,242,0.4); }
+  .social-icon.fa-linkedin-in:hover { background: #0077B5; box-shadow: 0 5px 20px rgba(0,119,181,0.4); }
+  .social-icon.fa-envelope:hover { background: #D44638; box-shadow: 0 5px 20px rgba(212,70,56,0.4); }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 35px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .container { padding: 0 24px; }
+    .hero h1 { font-size: 42px; }
+    .quick-service-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .service-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 38px; }
+    .service-section h2 { font-size: 28px; }
+    .cta-section h2 { font-size: 32px; }
+    .serve-label-static { font-size: 10px; padding: 5px 12px; margin-left: 12px; }
+    .serve-item { font-size: 12px; margin: 0 15px; }
+    .service-left, .service-right { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">2SD <span>Toxicology</span> Services</a>
+  <div class="nav-links">
+    <a href="index">Home</a>
+    <a href="service" style="color: var(--teal-mid);">Services</a>
+    <a href="about">About Us</a>
+	<a href="career">Career</a>
+    <a href="contact">Contact</a>
+    <a href="contact" class="nav-cta">Get in Touch</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<ul class="mobile-menu" id="mobileMenu">
+  <li><a href="index">Home</a></li>
+  <li><a href="service">Services</a></li>
+  <li><a href="about">About Us</a></li>
+<li><a href="career">Career</a></li>
+  <li><a href="contact">Contact</a></li>
+  <li><a href="contact" class="mobile-cta">Get in Touch</a></li>
+</ul>
+
+<!-- Hero Section -->
+<section class="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-content reveal">
+    <div class="hero-badge">✦ Our Expertise ✦</div>
+    <h1>
+      <span class="gradient-text">Services</span>
+    </h1>
+    <p class="hero-tagline">Comprehensive toxicology and biocompatibility solutions for medical devices, IVDs, and pharmaceutical products.</p>
+  </div>
+</section>
+
+<!-- Who We Serve Bar -->
+<div class="serve-wrapper">
+  <div class="serve-container">
+    <div class="serve-label-static">
+      <i class="fas fa-users" style="margin-right: 6px;"></i> Who we serve
+    </div>
+    <div class="serve-scroll">
+      <div class="serve-track">
+        <span class="serve-item">Medical Devices</span><span class="serve-dot"></span>
+        <span class="serve-item">In Vitro Diagnostics</span><span class="serve-dot"></span>
+        <span class="serve-item">Pharmaceutical Packaging</span><span class="serve-dot"></span>
+        <span class="serve-item">Biomaterials</span><span class="serve-dot"></span>
+        <span class="serve-item">Drug-Device Combinations</span><span class="serve-dot"></span>
+        <span class="serve-item">Cosmetics</span><span class="serve-dot"></span>
+        <span class="serve-item">Food Packaging</span><span class="serve-dot"></span>
+        <span class="serve-item">Medical Devices</span><span class="serve-dot"></span>
+        <span class="serve-item">In Vitro Diagnostics</span><span class="serve-dot"></span>
+        <span class="serve-item">Pharmaceutical Packaging</span><span class="serve-dot"></span>
+        <span class="serve-item">Biomaterials</span><span class="serve-dot"></span>
+        <span class="serve-item">Drug-Device Combinations</span><span class="serve-dot"></span>
+        <span class="serve-item">Cosmetics</span><span class="serve-dot"></span>
+        <span class="serve-item">Food Packaging</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Service List Section - Quick Overview (All 4 cards with proper icons) -->
+<section class="service-list-section">
+  <div class="container">
+    <h2 class="reveal">Our Core Services</h2>
+    <p class="section-sub reveal">End-to-end toxicology and biocompatibility solutions</p>
+    <div class="quick-service-grid">
+      <div class="quick-service-card reveal" onclick="document.getElementById('biocompatibility').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-microscope"></i>
+        <h3>Biocompatibility</h3>
+        <p>ISO 10993-1:2018 compliant evaluation & test plans</p>
+      </div>
+      <div class="quick-service-card reveal" onclick="document.getElementById('hrms').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-chromatograph"></i>
+        <h3>HRMS / E&L Studies</h3>
+        <p>ISO 10993-18 extractables & leachables testing</p>
+      </div>
+      <div class="quick-service-card reveal" onclick="document.getElementById('tra').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h3>Toxicology Risk Assessment</h3>
+        <p>ISO 10993-17, (Q)SAR, PBPK modelling</p>
+      </div>
+      <div class="quick-service-card reveal" onclick="document.getElementById('regulatory').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-file-alt"></i>
+        <h3>Regulatory Support</h3>
+        <p>CER, IQCP, Assay validation for IVD</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 1: Biocompatibility of Medical Devices -->
+<section class="service-section" id="biocompatibility">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-left reveal">
+        <div class="service-icon-large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h2>Biocompatibility of Medical Devices</h2>
+        <p class="service-intro">If you are involved in the production or supply of medical devices, biomaterials, resins, or other raw materials for medical devices and device-drug combination products, or if you are a biomedical engineer seeking to develop a medical device, the experts at 2SD Toxicology Services offer consulting services to help you prepare:</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Medical device biocompatibility test plan per ISO 10993-1:2018 guidance and US FDA Guidance</li>
+          <li><i class="fas fa-check-circle"></i> Extractable and leachable testing plan – solvent selection, extraction condition, and AET calculation per ISO 10993-18:2020 guidance</li>
+          <li><i class="fas fa-check-circle"></i> Toxicological risk assessment of E&L of medical devices per ISO 10993-17:2002</li>
+          <li><i class="fas fa-check-circle"></i> Biological Safety Evaluation Report</li>
+          <li><i class="fas fa-check-circle"></i> EU MDR Restricted Substances evaluation</li>
+          <li><i class="fas fa-check-circle"></i> Material biocompatibility assessment</li>
+          <li><i class="fas fa-check-circle"></i> Design and manufacturing change assessment</li>
+          <li><i class="fas fa-check-circle"></i> Biocompatibility study gap assessment</li>
+          <li><i class="fas fa-check-circle"></i> Biocompatibility study monitoring – including study design and protocol development</li>
+          <li><i class="fas fa-check-circle"></i> Evaluation of medical device sterilization methods</li>
+          <li><i class="fas fa-check-circle"></i> Regulatory support for FDA and EU MDR health authorities</li>
+          <li><i class="fas fa-check-circle"></i> Systematic literature review per ISO 10993-1 Appendix C</li>
+        </ul>
+        <div class="service-tags">
+          <span class="service-tag">ISO 10993-1</span>
+          <span class="service-tag">ISO 10993-17</span>
+          <span class="service-tag">ISO 10993-18</span>
+          <span class="service-tag">EU MDR</span>
+          <span class="service-tag">FDA Guidance</span>
+        </div>
+        <a href="#contact" class="consult-btn">Consult with our Medical Device Toxicologist <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-right reveal">
+        <h3><i class="fas fa-microscope"></i> Why Choose 2SD?</h3>
+        <p style="margin-bottom: 20px; font-size: 14px;">Our team of board-certified toxicologists and regulatory experts has decades of combined experience in medical device biocompatibility. We provide end-to-end support from test planning to regulatory submission.</p>
+        <div class="feature-highlight">
+          <p><strong>✦ DABT Certified Toxicologists</strong><br>American Board of Toxicology diplomates leading your assessment</p>
+        </div>
+        <div class="feature-highlight" style="margin-top: 15px;">
+          <p><strong>✦ Global Regulatory Expertise</strong><br>FDA, EU MDR, Health Canada, TGA compliance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 2: High Resolution Mass Spectrometry (HRMS / E&L Studies) -->
+<section class="service-section" id="hrms">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-left reveal">
+        <div class="service-icon-large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40">
+            <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+          </svg>
+        </div>
+        <h2>High Resolution Mass Spectrometry (HRMS)</h2>
+        <p class="service-intro">2SD Toxicology Services is currently constructing a state-of-the-art High-Resolution Mass Spectrometry Facility (HRMS). This facility will feature cutting-edge bioanalytical capabilities for Extractables & Leachables (E&L) studies, including:</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Extractable leachable study of medical device per ISO 10993-18 in an ISO 17025 accredited facility</li>
+          <li><i class="fas fa-check-circle"></i> USP 661 testing (Plastic Materials of Construction and Plastic Packaging Systems for Pharmaceutical use)</li>
+          <li><i class="fas fa-check-circle"></i> Bioanalytical method development and validation for small molecule drug/xenobiotic in biological matrix per FDA/ICH M10 guidance</li>
+          <li><i class="fas fa-check-circle"></i> Metabolite identification and profiling in blood and urine</li>
+          <li><i class="fas fa-check-circle"></i> Non-GLP DMPK study</li>
+          <li><i class="fas fa-check-circle"></i> On-site HRMS bioanalytical method transfer and HRMS training packages</li>
+        </ul>
+        <div class="service-tags">
+          <span class="service-tag">ISO 17025</span>
+          <span class="service-tag">ISO 10993-18</span>
+          <span class="service-tag">USP 661</span>
+          <span class="service-tag">FDA/ICH M10</span>
+          <span class="service-tag">HRMS</span>
+        </div>
+        <a href="#contact" class="consult-btn">Consult with our Analytical Chemist <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-right reveal">
+        <h3><i class="fas fa-flask"></i> E&L Studies Expertise</h3>
+        <p style="margin-bottom: 20px; font-size: 14px;">Our upcoming HRMS facility in Research Triangle Park, NC will be ISO 17025 accredited, providing you with regulatory-ready extractables and leachables data for global submissions.</p>
+        <div class="feature-highlight">
+          <p><strong>✦ ISO 10993-18 Compliant</strong><br>Full chemical characterization per latest guidance</p>
+        </div>
+        <div class="feature-highlight" style="margin-top: 15px;">
+          <p><strong>✦ In-House Advantage</strong><br>Faster turnaround, IP protection, and direct scientist access</p>
+        </div>
+        <div class="feature-highlight" style="margin-top: 15px;">
+          <p><strong>✦ AET Calculation & Solvent Selection</strong><br>Expert consultation for optimal extraction conditions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 3: Toxicology Risk Assessment -->
+<section class="service-section" id="tra">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-left reveal">
+        <div class="service-icon-large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40">
+            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+        </div>
+        <h2>Toxicology Risk Assessment</h2>
+        <p class="service-intro">If you have identified an extractable/leachable chemical in your medical device, drug, cosmetics, consumer product, or food packaging material, 2SD TS offers the expertise of American Board of Toxicology (ABT) diplomates to evaluate the chemical. Our consultants have extensive experience with both commercial and open source (Q)SAR analysis programs, such as the commercial software Leadscope and the OECD Toolbox.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Apply cheminformatics approach (e.g., chemical functional group identification, structure/activity, similarity search) to characterize the molecule and predict physicochemical properties, ADME and environmental fate, and toxicity.</li>
+          <li><i class="fas fa-check-circle"></i> Data filling and read across for biological endpoints (cytotoxicity, sensitization, genotoxicity)</li>
+          <li><i class="fas fa-check-circle"></i> Calculation of daily intake, allowable limits, exposure limits, and margin of safety following oral, inhalation or dermal exposure</li>
+          <li><i class="fas fa-check-circle"></i> Physiologically based pharmacokinetic modelling (PBPK) modelling of dietary chemical contaminants for exposure assessment for general population, placental transfer and newborn exposure calculation</li>
+          <li><i class="fas fa-check-circle"></i> Chemical hazard leveling, PBT (persistent, bioaccumulative and toxic) assessment</li>
+          <li><i class="fas fa-check-circle"></i> Material safety data sheet (MSDS) preparation</li>
+          <li><i class="fas fa-check-circle"></i> Chemical risk characterization and mitigation approaches</li>
+        </ul>
+        <div class="service-tags">
+          <span class="service-tag">ISO 10993-17</span>
+          <span class="service-tag">(Q)SAR</span>
+          <span class="service-tag">PBPK Modelling</span>
+          <span class="service-tag">DABT Certified</span>
+        </div>
+        <a href="#contact" class="consult-btn">Consult with our Toxicologist <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-right reveal">
+        <h3><i class="fas fa-chart-line"></i> ABT Diplomate Expertise</h3>
+        <p style="margin-bottom: 20px; font-size: 14px;">Our risk assessments are led by American Board of Toxicology (ABT) certified diplomates with decades of regulatory experience.</p>
+        <div class="feature-highlight">
+          <p><strong>✦ Comprehensive Approach</strong><br>From chemical characterization to margin of safety calculation</p>
+        </div>
+        <div class="feature-highlight" style="margin-top: 15px;">
+          <p><strong>✦ Regulatory Acceptance</strong><br>Reports accepted by FDA, EU Notified Bodies, and global regulators</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 4: Regulatory Support -->
+<section class="service-section" id="regulatory">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-left reveal">
+        <div class="service-icon-large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40">
+            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+        </div>
+        <h2>Regulatory Support</h2>
+        <p class="service-intro">Our services include:</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Clinical Evaluation Report (CER) for IVD products</li>
+          <li><i class="fas fa-check-circle"></i> Individualized quality control plans (IQCP) for diagnostics assay</li>
+          <li><i class="fas fa-check-circle"></i> Assay validation and performance verification</li>
+        </ul>
+        <div class="service-tags">
+          <span class="service-tag">CER</span>
+          <span class="service-tag">IQCP</span>
+          <span class="service-tag">Assay Validation</span>
+          <span class="service-tag">IVDR</span>
+        </div>
+        <a href="#contact" class="consult-btn">Consult with our Regulatory Expert <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-right reveal">
+        <h3><i class="fas fa-gavel"></i> Global Regulatory Submissions</h3>
+        <p style="margin-bottom: 20px; font-size: 14px;">We help you navigate complex regulatory pathways for FDA 510(k), De Novo, PMA, and EU MDR/IVDR submissions.</p>
+        <div class="feature-highlight">
+          <p><strong>✦ IVD Focus</strong><br>Specialized expertise in diagnostic product regulations</p>
+        </div>
+        <div class="feature-highlight" style="margin-top: 15px;">
+          <p><strong>✦ End-to-End Support</strong><br>From pre-submission to post-market surveillance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2 class="reveal">Ready to ensure your product's safety?</h2>
+    <p class="reveal">Talk to our board-certified toxicologists and analytical chemists today.</p>
+    <a href="#" class="btn-primary">📞 530-405-7200 — Call or Email Us</a>
+    <div style="margin-top: 22px;">
+      <a href="#" style="color: var(--teal-mid); font-size: 14px;">info@twosdtox.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="footer-logo">2SD <span>Toxicology</span> Services LLC</a>
+        <div class="footer-address">5129 NC HWY 55, Suite #104<br>Durham, NC 27713<br>North Carolina</div>
+        <a href="tel:5304057200" class="footer-phone">📞 530-405-7200</a>
+        <div class="social-icons">
+          <a href="#" class="social-icon fab fa-facebook-f"></a>
+          <a href="#" class="social-icon fab fa-twitter"></a>
+          <a href="#" class="social-icon fab fa-linkedin-in"></a>
+          <a href="#" class="social-icon fas fa-envelope"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#biocompatibility">Biocompatibility</a></li>
+          <li><a href="#hrms">HRMS / E&L Studies</a></li>
+          <li><a href="#tra">Toxicology Risk Assessment</a></li>
+          <li><a href="#regulatory">Regulatory Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Standards</h4>
+        <ul>
+          <li><a href="#">ISO 10993 Series</a></li>
+          <li><a href="#">FDA Guidance</a></li>
+          <li><a href="#">EU-MDR / IVDR</a></li>
+          <li><a href="#">USP 661</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact">Contact Us</a></li>
+          <li><a href="contact">Request a Quote</a></li>
+          <li><a href="career">Career</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 2SD Toxicology Services LLC. All rights reserved. | Data‑driven safety assessments for medical devices & IVD products.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  function checkReveal() {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      const revealPoint = 120;
+      if (revealTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
+
+  const canvas = document.getElementById('particles-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let width, height;
+
+    function resizeCanvas() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.opacity = Math.random() * 0.3 + 0.1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0) this.x = width;
+        if (this.x > width) this.x = 0;
+        if (this.y < 0) this.y = height;
+        if (this.y > height) this.y = 0;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(133, 183, 235, ${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      const particleCount = Math.min(80, Math.floor(width * height / 10000));
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initParticles();
+    });
+    resizeCanvas();
+    initParticles();
+    animateParticles();
+  }
+</script>
+</body>
+</html>
